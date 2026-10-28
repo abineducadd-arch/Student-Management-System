@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-porcelain: #F4F0E8;
+    --color-forest: #263329;
+    --color-ink: #17221D;
+    --color-ink-muted: #72776F;
+    --color-sage: #D9E2C6;
+    --color-lavender: #DDD1EA;
+    --color-sand: #E9D3B5;
+    --color-card: #FBF9F4;
+    --color-border: #E3DDD2;
+  }
+
+  body {
+    background-color: #F4F0E8;
+    color: #17221D;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D0C8B8;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B0A898;
+  }
+}
+
+/* Paper grain subtle overlay */
+.paper-grain {
+  background-image: radial-gradient(rgba(38, 51, 41, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Botanical subtle watermarks & silhouettes */
+.botanical-pattern {
+  background-color: #F4F0E8;
+  background-image: 
+    radial-gradient(#E3DDD2 0.75px, transparent 0.75px), 
+    radial-gradient(#E3DDD2 0.75px, #F4F0E8 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Card hover animation */
+.editorial-card {
+  background-color: #FBF9F4;
+  border: 1px solid #E3DDD2;
+  border-radius: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.editorial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(38, 51, 41, 0.07);
+}
+
+/* Smooth button transitions */
+.btn-forest {
+  background-color: #263329;
+  color: #FBF9F4;
+  transition: all 0.2s ease;
+}
+.btn-forest:hover {
+  background-color: #1c261f;
+  transform: translateY(-1px);
+}
+.btn-forest:active {
+  transform: translateY(0);
+}
+
+/* Custom focus ring */
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #263329;
+  outline-offset: 2px;
+}
