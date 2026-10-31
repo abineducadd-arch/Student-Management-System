@@ -20,9 +20,14 @@ if (storedUrl && storedKey) {
   try {
     supabase = createClient(storedUrl, storedKey);
   } catch (err) {
-    console.warn('Failed to initialize Supabase client:', err);
+    console.warn('[AURELIA] Failed to initialize Supabase client:', err);
     supabase = null;
   }
+} else {
+  console.warn(
+    '[AURELIA] Supabase credentials not found. Environment variables VITE_SUPABASE_URL and/or VITE_SUPABASE_ANON_KEY are unset. ' +
+    'The application is operating in persistent local fallback mode. To connect to Supabase in production, define VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your Vercel Project Settings, or connect via the in-app Settings modal.'
+  );
 }
 
 export const isSupabaseConfigured = (): boolean => {
