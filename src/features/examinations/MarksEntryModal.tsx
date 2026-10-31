@@ -246,3 +246,4 @@ export const MarksEntryModal: React.FC<MarksEntryModalProps> = ({
     </Modal>
   );
 };
+

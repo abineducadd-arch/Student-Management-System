@@ -165,3 +165,4 @@ export const BotanicalWatermarkPattern: React.FC = () => (
     <circle cx="90" cy="160" r="8" fill="#DDD1EA" />
   </svg>
 );
+

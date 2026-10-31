@@ -282,3 +282,4 @@ export const CourseFormModal: React.FC<CourseFormModalProps> = ({
     </Modal>
   );
 };
+

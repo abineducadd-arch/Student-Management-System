@@ -19,6 +19,7 @@ interface LayoutContextType {
   onViewStudent: (student: Student) => void;
   onEditStudent: (student: Student) => void;
   onEditCourse: (course: Course) => void;
+  onOpenSupabaseModal: () => void;
 }
 
 const DashboardWrapper: React.FC = () => {
@@ -67,11 +68,10 @@ const AttendanceWrapper: React.FC = () => {
 };
 
 const SettingsWrapper: React.FC = () => {
+  const context = useOutletContext<LayoutContextType>();
   return (
     <SettingsPage
-      onOpenSupabaseModal={() => {
-        // Trigger command or modal
-      }}
+      onOpenSupabaseModal={context.onOpenSupabaseModal}
     />
   );
 };

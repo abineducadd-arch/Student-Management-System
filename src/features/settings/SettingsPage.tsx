@@ -428,3 +428,4 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({ onOpenSupabaseModal 
     </div>
   );
 };
+

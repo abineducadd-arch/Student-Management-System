@@ -98,6 +98,7 @@ export const AppLayout: React.FC = () => {
               onViewStudent: handleViewStudent,
               onEditStudent: handleEditStudent,
               onEditCourse: handleEditCourse,
+              onOpenSupabaseModal: () => setIsSupabaseModalOpen(true),
             }}
           />
         </main>
@@ -168,3 +169,4 @@ export const AppLayout: React.FC = () => {
     </div>
   );
 };
+

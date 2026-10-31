@@ -144,7 +144,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                   <CampusArchIllustration className="w-full h-full" />
                 </div>
                 {/* Handwritten Floating Note */}
-                <div className="absolute -top-1 right-2 sm:right-6 transform rotate-6 bg-[#FAF6EE]/90 backdrop-blur-xs px-3 py-1 rounded-full border border-[#E9D3B5] shadow-warm-sm pointer-events-none">
+                <div className="absolute -top-1 right-2 sm:right-6 transform rotate-6 bg-[#FAF6EE]/90 backdrop-blur-sm px-3 py-1 rounded-full border border-[#E9D3B5] shadow-warm-sm pointer-events-none">
                   <span className="font-handwriting text-lg text-[#263329] whitespace-nowrap">
                     Small steps Big dreams ✨
                   </span>
@@ -601,3 +601,4 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
     </div>
   );
 };
+

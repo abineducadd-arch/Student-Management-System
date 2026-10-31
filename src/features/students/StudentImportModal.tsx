@@ -178,3 +178,4 @@ STU011,Elena,Rostova,elena.r@aurelia.edu,+1 (555) 823-4455,Female,2004-10-05,Inf
     </Modal>
   );
 };
+

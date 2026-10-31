@@ -370,3 +370,4 @@ CREATE POLICY "Allow authenticated modifications on results" ON examination_resu
 CREATE POLICY "Allow authenticated access on fees" ON student_fees FOR ALL USING (true);
 CREATE POLICY "Allow authenticated access on payments" ON payments FOR ALL USING (true);
 CREATE POLICY "Allow authenticated access on notifications" ON notifications FOR ALL USING (true);
+

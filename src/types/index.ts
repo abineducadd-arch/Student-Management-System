@@ -231,3 +231,4 @@ export interface InstitutionSettings {
   attendance_threshold: number; // e.g. 75%
   grading_scale: GradingScaleTier[];
 }
+

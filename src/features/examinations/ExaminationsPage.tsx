@@ -278,3 +278,4 @@ export const ExaminationsPage: React.FC = () => {
     </div>
   );
 };
+

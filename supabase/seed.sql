@@ -45,3 +45,4 @@ INSERT INTO academic_events (title, category, date, time, description, audience,
 ('Mid Term Exam', 'Exam', '2025-10-29', '09:30 AM', 'Comprehensive mid-term evaluations for 3rd semester undergraduate cohorts.', 'Computer Science • Sem 3', 'sage'),
 ('Parent Meeting', 'Meeting', '2025-10-31', '02:00 PM', 'Bi-annual parental and faculty academic consultative forum.', 'All Departments', 'lavender'),
 ('Fee Payment Due', 'Fee', '2025-11-02', '11:59 PM', 'Final deadline for Fall 2025 semester tuition balance settlement.', 'Academic Year 2025-26', 'sand');
+

@@ -315,3 +315,4 @@ export const AcademicsPage: React.FC<AcademicsPageProps> = ({
     </div>
   );
 };
+

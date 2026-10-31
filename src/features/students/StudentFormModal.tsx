@@ -591,3 +591,4 @@ export const StudentFormModal: React.FC<StudentFormModalProps> = ({
     </Modal>
   );
 };
+

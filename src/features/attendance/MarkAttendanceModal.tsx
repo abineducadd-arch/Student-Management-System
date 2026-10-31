@@ -294,3 +294,4 @@ export const MarkAttendanceModal: React.FC<MarkAttendanceModalProps> = ({
     </Modal>
   );
 };
+

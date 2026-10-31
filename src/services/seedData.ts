@@ -734,3 +734,4 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     link: '/fees'
   }
 ];
+
