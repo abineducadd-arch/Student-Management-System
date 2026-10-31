@@ -187,3 +187,4 @@ CREATE POLICY "Payments deletable by Admin only" ON public.payments FOR DELETE U
 
 DROP POLICY IF EXISTS "Student fees manageable by Admin and Accountant" ON public.student_fees;
 CREATE POLICY "Student fees manageable by Admin and Accountant" ON public.student_fees FOR ALL USING (public.is_accountant()) WITH CHECK (public.is_accountant());
+
