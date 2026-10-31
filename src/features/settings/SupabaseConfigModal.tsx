@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Database, CheckCircle2, AlertCircle, ExternalLink, Key, Copy, Check } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';
 import { updateSupabaseCredentials, isSupabaseConfigured } from '@/lib/supabase';
+import { dataService } from '@/services/dataService';
 
 interface SupabaseConfigModalProps {
   isOpen: boolean;
@@ -20,6 +21,7 @@ export const SupabaseConfigModal: React.FC<SupabaseConfigModalProps> = ({ isOpen
     e.preventDefault();
     const success = updateSupabaseCredentials(url.trim(), key.trim());
     if (success) {
+      dataService.initializeSupabaseData();
       setStatus('success');
       setTimeout(() => {
         onClose();

@@ -36,6 +36,10 @@ export const AppLayout: React.FC = () => {
   const deepStudentId = searchParams.get('id');
 
   React.useEffect(() => {
+    dataService.initializeSupabaseData();
+  }, []);
+
+  React.useEffect(() => {
     if (deepStudentId) {
       const student = dataService.getStudentById(deepStudentId);
       if (student) {
