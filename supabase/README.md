@@ -210,3 +210,4 @@ RESTART IDENTITY CASCADE;
 
 -- Then re-run supabase/seed.sql
 ```
+

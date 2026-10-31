@@ -331,3 +331,4 @@ DROP POLICY IF EXISTS "Audit logs insertable by system and staff" ON public.audi
 CREATE POLICY "Audit logs insertable by system and staff" ON public.audit_logs
     FOR INSERT TO authenticated
     WITH CHECK (public.is_staff());
+

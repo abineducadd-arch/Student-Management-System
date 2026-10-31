@@ -127,3 +127,4 @@ SELECT
     ROUND((SUM(sf.paid_amount) / NULLIF(SUM(sf.net_payable), 0)) * 100.0, 1) AS collection_efficiency_percentage
 FROM public.student_fees sf
 GROUP BY sf.academic_year, sf.semester;
+

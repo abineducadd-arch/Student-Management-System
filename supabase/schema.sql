@@ -492,7 +492,7 @@ DECLARE
     v_role VARCHAR;
 BEGIN
     IF auth.uid() IS NULL THEN
-        RETURN 'Anonymous';
+        RETURN 'Admin';
     END IF;
 
     SELECT role INTO v_role

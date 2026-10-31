@@ -437,3 +437,4 @@ CREATE INDEX IF NOT EXISTS idx_events_category ON public.academic_events(categor
 
 CREATE INDEX IF NOT EXISTS idx_notifications_user ON public.notifications(user_id);
 CREATE INDEX IF NOT EXISTS idx_notifications_read ON public.notifications(read);
+

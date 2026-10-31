@@ -1,8 +1,18 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
+const formatSupabaseUrl = (input: string): string => {
+  const trimmed = input.trim();
+  if (!trimmed) return '';
+  if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
+    return trimmed;
+  }
+  return `https://${trimmed}.supabase.co`;
+};
+
 // Keys from localStorage or environment variables
-const storedUrl = localStorage.getItem('aurelia_supabase_url') || import.meta.env.VITE_SUPABASE_URL || '';
-const storedKey = localStorage.getItem('aurelia_supabase_key') || import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const rawUrl = localStorage.getItem('aurelia_supabase_url') || import.meta.env.VITE_SUPABASE_URL || '';
+const storedUrl = formatSupabaseUrl(rawUrl);
+const storedKey = (localStorage.getItem('aurelia_supabase_key') || import.meta.env.VITE_SUPABASE_ANON_KEY || '').trim();
 
 export let supabase: SupabaseClient | null = null;
 
@@ -20,16 +30,19 @@ export const isSupabaseConfigured = (): boolean => {
 };
 
 export const updateSupabaseCredentials = (url: string, key: string): boolean => {
-  if (!url || !key) {
+  const formattedUrl = formatSupabaseUrl(url);
+  const trimmedKey = key.trim();
+
+  if (!formattedUrl || !trimmedKey) {
     localStorage.removeItem('aurelia_supabase_url');
     localStorage.removeItem('aurelia_supabase_key');
     supabase = null;
     return true;
   }
   try {
-    const client = createClient(url, key);
-    localStorage.setItem('aurelia_supabase_url', url);
-    localStorage.setItem('aurelia_supabase_key', key);
+    const client = createClient(formattedUrl, trimmedKey);
+    localStorage.setItem('aurelia_supabase_url', formattedUrl);
+    localStorage.setItem('aurelia_supabase_key', trimmedKey);
     supabase = client;
     return true;
   } catch (err) {
@@ -37,4 +50,3 @@ export const updateSupabaseCredentials = (url: string, key: string): boolean => 
     return false;
   }
 };
-

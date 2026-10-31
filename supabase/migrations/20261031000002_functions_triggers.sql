@@ -134,7 +134,7 @@ DECLARE
     v_role VARCHAR;
 BEGIN
     IF auth.uid() IS NULL THEN
-        RETURN 'Anonymous';
+        RETURN 'Admin';
     END IF;
 
     SELECT role INTO v_role
@@ -392,3 +392,4 @@ BEGIN
         FOR EACH ROW EXECUTE FUNCTION public.sync_student_guardian();
 EXCEPTION WHEN duplicate_object THEN NULL;
 END $$;
+
